@@ -1,5 +1,5 @@
 <?php
-include "/inc/func.php";
+include "./inc/func.php";
 
 $searchName = "Сплит 2016";
 
@@ -16,23 +16,6 @@ $hdGo = new FindVideo();
 $hdGo = $hdGo->hdgo(930534);
 //var_dump($hdGo);
 
-/*<video id="video_1" class="video-js vjs-default-skin" controls data-setup='{}' >
-  <source src="https://vjs.zencdn.net/v/oceans.mp4?sd" type='video/mp4' label='SD' res='480' />
-  <source src="https://vjs.zencdn.net/v/oceans.mp4?hd" type='video/mp4' label='HD' res='1080'/>
-  <source src="https://vjs.zencdn.net/v/oceans.mp4?phone" type='video/mp4' label='phone' res='144'/>
-  <source src="https://vjs.zencdn.net/v/oceans.mp4?4k" type='video/mp4' label='4k' res='2160'/>
-</video>*/
-echo '<link href="/lib/videojs-resolution-switcher.css" media="all" rel="stylesheet" />';
-echo '<link href="/lib/video-js.min.css" media="all" rel="stylesheet" />';
-echo '<script src="/lib/video.min.js"></script>';
-echo "<script src='/lib/videojs-resolution-switcher.js'></script>";
-echo '<video id="video_1" class="video-js vjs-default-skin" controls data-setup=\'{}\' >';
-echo "<source src='".$hdGo[1][0]."?360p' type='video/mp4' label='360p' res='360' />";
-echo "<source src='".$hdGo[1][1]."?480p' type='video/mp4' label='480p' res='480' />";
-echo "<source src='".$hdGo[1][2]."?720p' type='video/mp4' label='720p' res='720' />";
-echo "<source src='".$hdGo[1][3]."?1080p' type='video/mp4' label='1080p' res='1080' />";
-echo "</video>";
-
 /*if (isset($hdGo->error)) {
     echo "Video Not Found";
 } else {
@@ -43,7 +26,7 @@ echo "</video>";
 //$pars = $pars->parser("http://hdgo.cc/video/5x8MSjV0D06K1lw6sIDqPVgf99EjUSfi/14/");
 //$pars = $pars->parser("http://1.a8r7oi4dwers.ru/video/5x8MSjV0D06K1lw6sIDqPVgf99EjUSfi/14/");
 
-// DEBUG
+// DEBUG xD
 //var_dump($pars);
 //var_dump($hdGo);
 
