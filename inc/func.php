@@ -29,14 +29,14 @@ function parser($url){
     $context  = stream_context_create($options);
     $response = file_get_contents($url, false, $context);
 
-    preg_match('/iframe src="http:\/\/.*\/"/', $response , $iframe );
+    preg_match('/iframe src="(https?:\/\/.+?)"/i', $response , $iframe );
     $iframe = substr(substr($iframe[0], 12),0,-1);
 
     $text = file_get_contents($iframe);
     preg_match('/media: \[\{url:.*/', $text , $title );
     preg_match_all("/url\s*:\s*'([^']+)'/", $title[0], $text);
+    echo "<pre>"; var_dump($text); echo "</pre>";
     return $text;
-    //var_dump($text);
 
 //--------------------------------------------------
     // :http-user-agent=Mozilla/5.0 (iPhone; CPU iPhone OS 5_0 like Mac OS X)
